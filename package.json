@@ -4,12 +4,11 @@
 	"description": "The only theme for VS Code",
 	"license": "MIT",
 	"version": "0.0.1",
-	"publisher": "Mark Gutenberger",
+	"publisher": "gutenfries",
 	"author": {
 		"name": "Mark Gutenberger",
 		"email": "gutenfries@gmail.com"
 	},
-	"icon": "TODO",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/gutenfries/10x-Dark-Theme.git"
