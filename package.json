@@ -1,0 +1,56 @@
+{
+	"name": "10x-dark-theme",
+	"displayName": "10x Dark Theme",
+	"description": "The only theme for VS Code",
+	"license": "MIT",
+	"version": "0.0.1",
+	"publisher": "Mark Gutenberger",
+	"author": {
+		"name": "Mark Gutenberger",
+		"email": "gutenfries@gmail.com"
+	},
+	"icon": "TODO",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gutenfries/10x-Dark-Theme.git"
+	},
+	"bugs": {
+		"url": "https://github.com/gutenfries/10x-Dark-Theme/issues"
+	},
+	"engines": {
+		"vscode": "^1.72.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"theme",
+		"dark",
+		"10x",
+		"10x dark",
+		"10x dark theme",
+		"gutenfries",
+		"Mark Gutenberger",
+		"10x Italic",
+		"10x Italic Theme",
+		"10x Italic Dark"
+	],
+	"galleryBanner": {
+		"color": "#2c2e34",
+		"theme": "dark"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "10x Dark Theme",
+				"uiTheme": "vs-dark",
+				"path": "./themes/10x Dark Theme.json"
+			},
+			{
+				"label": "10x Dark Theme (Italic)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/10x Light Theme Italic.json"
+			}
+		]
+	}
+}
