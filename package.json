@@ -3,7 +3,7 @@
 	"displayName": "10x Dark Theme",
 	"description": "The only theme for VS Code",
 	"license": "MIT",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"publisher": "gutenfries",
 	"author": {
 		"name": "Mark Gutenberger",
@@ -22,6 +22,7 @@
 	"categories": [
 		"Themes"
 	],
+	"icon": "images/logo.png",
 	"keywords": [
 		"theme",
 		"dark",
@@ -43,12 +44,12 @@
 			{
 				"label": "10x Dark Theme",
 				"uiTheme": "vs-dark",
-				"path": "./themes/10x Dark Theme.json"
+				"path": "./themes/10x-Dark-Theme.json"
 			},
 			{
-				"label": "10x Dark Theme (Italic)",
+				"label": "10x Italic Theme",
 				"uiTheme": "vs-dark",
-				"path": "./themes/10x Light Theme Italic.json"
+				"path": "./themes/10x-Dark-Theme-Italic.json"
 			}
 		]
 	}
