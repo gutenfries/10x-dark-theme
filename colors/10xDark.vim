@@ -200,7 +200,7 @@ call s:h("Number", { "fg": s:dark_yellow }) " a number constant: 234, 0xff
 call s:h("Boolean", { "fg": s:dark_yellow }) " a boolean constant: TRUE, false
 call s:h("Float", { "fg": s:dark_yellow }) " a floating point constant: 2.3e10
 call s:h("Identifier", { "fg": s:red }) " any variable name
-call s:h("Function", { "fg": s:blue }) " function name (also: methods for classes)
+call s:h("Function", { "fg": s:blue, "gui": "italic", "cterm": "italic" }) " function name (also: methods for classes)
 call s:h("Statement", { "fg": s:purple }) " any statement
 call s:h("Conditional", { "fg": s:purple }) " if, then, else, endif, switch, etc.
 call s:h("Repeat", { "fg": s:purple }) " for, do, while, etc.
@@ -209,15 +209,15 @@ call s:h("Operator", { "fg": s:purple }) " sizeof", "+", "*", etc.
 call s:h("Keyword", { "fg": s:purple }) " any other keyword
 call s:h("Exception", { "fg": s:purple }) " try, catch, throw
 call s:h("PreProc", { "fg": s:yellow }) " generic Preprocessor
-call s:h("Include", { "fg": s:blue }) " preprocessor #include
+call s:h("Include", { "fg": s:purple }) " preprocessor #include
 call s:h("Define", { "fg": s:purple }) " preprocessor #define
 call s:h("Macro", { "fg": s:purple }) " same as Define
 call s:h("PreCondit", { "fg": s:yellow }) " preprocessor #if, #else, #endif, etc.
 call s:h("Type", { "fg": s:yellow }) " int, long, char, etc.
 call s:h("StorageClass", { "fg": s:yellow }) " static, register, volatile, etc.
-call s:h("Structure", { "fg": s:yellow }) " struct, union, enum, etc.
+call s:h("Structure", { "fg": s:cyan }) " struct, union, enum, etc.
 call s:h("Typedef", { "fg": s:yellow }) " A typedef
-call s:h("Special", { "fg": s:blue }) " any special symbol
+call s:h("Special", { "fg": s:cyan }) " any special symbol
 call s:h("SpecialChar", { "fg": s:dark_yellow }) " special character in a constant
 call s:h("Tag", {}) " you can use CTRL-] on this
 call s:h("Delimiter", {}) " character that needs attention
@@ -226,7 +226,7 @@ call s:h("Debug", {}) " debugging statements
 call s:h("Underlined", { "gui": "underline", "cterm": "underline" }) " text that stands out, HTML links
 call s:h("Ignore", {}) " left blank, hidden
 call s:h("Error", { "fg": s:red }) " any erroneous construct
-call s:h("Todo", { "fg": s:purple }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+call s:h("Todo", { "fg": s:dark_yellow }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 " }}}
 
@@ -362,24 +362,24 @@ call s:h("htmlTitle", { "fg": s:white })
 
 " JavaScript
 call s:h("javaScriptBraces", { "fg": s:white })
-call s:h("javaScriptFunction", { "fg": s:purple })
+call s:h("javaScriptFunction", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
 call s:h("javaScriptIdentifier", { "fg": s:purple })
 call s:h("javaScriptNull", { "fg": s:dark_yellow })
 call s:h("javaScriptNumber", { "fg": s:dark_yellow })
 call s:h("javaScriptRequire", { "fg": s:cyan })
 call s:h("javaScriptReserved", { "fg": s:purple })
 " https://github.com/pangloss/vim-javascript
-call s:h("jsArrowFunction", { "fg": s:purple })
+call s:h("jsArrowFunction", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
 call s:h("jsClassKeyword", { "fg": s:purple })
-call s:h("jsClassMethodType", { "fg": s:purple })
+call s:h("jsClassMethodType", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
 call s:h("jsDocParam", { "fg": s:blue })
 call s:h("jsDocTags", { "fg": s:purple })
 call s:h("jsExport", { "fg": s:purple })
 call s:h("jsExportDefault", { "fg": s:purple })
 call s:h("jsExtendsKeyword", { "fg": s:purple })
 call s:h("jsFrom", { "fg": s:purple })
-call s:h("jsFuncCall", { "fg": s:blue })
-call s:h("jsFunction", { "fg": s:purple })
+call s:h("jsFuncCall", { "fg": s:blue, "gui": "italic", "cterm": "italic" })
+call s:h("jsFunction", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
 call s:h("jsGenerator", { "fg": s:yellow })
 call s:h("jsGlobalObjects", { "fg": s:yellow })
 call s:h("jsImport", { "fg": s:purple })
@@ -395,7 +395,7 @@ call s:h("jsTemplateVar", { "fg": s:green })
 call s:h("jsThis", { "fg": s:red })
 call s:h("jsUndefined", { "fg": s:dark_yellow })
 " https://github.com/othree/yajs.vim
-call s:h("javascriptArrowFunc", { "fg": s:purple })
+call s:h("javascriptArrowFunc", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
 call s:h("javascriptClassExtends", { "fg": s:purple })
 call s:h("javascriptClassKeyword", { "fg": s:purple })
 call s:h("javascriptDocNotation", { "fg": s:purple })
@@ -557,6 +557,10 @@ call s:h("texRefZone", { "fg": s:blue })
 call s:h("typescriptReserved", { "fg": s:purple })
 call s:h("typescriptEndColons", { "fg": s:white })
 call s:h("typescriptBraces", { "fg": s:white })
+
+" Rust
+call s:h("rustExternCrate", { "fg": s:purple })
+call s:h("rustExternCrateName", { "fg": s:blue })
 
 " XML
 call s:h("xmlAttrib", { "fg": s:dark_yellow })
