@@ -10,7 +10,8 @@ const baseColors = Object.freeze({
 		gui: '#ec7279',
 		cterm: '204',
 		cterm16: '1',
-	}, // alternate cterm: 168
+	},
+	// alternate cterm: 168
 	dark_red: {
 		gui: '#ec7279',
 		cterm: '196',
@@ -35,17 +36,20 @@ const baseColors = Object.freeze({
 		gui: '#6cb6eb',
 		cterm: '39',
 		cterm16: '4',
-	}, // alternate cterm: 75
+	},
+	// alternate cterm: 75
 	purple: {
 		gui: '#d38aea',
 		cterm: '170',
 		cterm16: '5',
-	}, // alternate cterm: 176
+	},
+	// alternate cterm: 176
 	cyan: {
 		gui: '#4ddbc1',
 		cterm: '38',
 		cterm16: '6',
-	}, // alternate cterm: 73
+	},
+	// alternate cterm: 73
 	white: {
 		gui: '#c5cdd9',
 		cterm: '145',

@@ -66,9 +66,9 @@ if !exists("g:ten_x_dark_termcolors")
 endif
 
 " Not all terminals support italics properly. If yours does, opt-in.
-if !exists("g:ten_x_dark_terminal_italics")
-  let g:ten_x_dark_terminal_italics = 0
-endif
+"  if !exists("g:ten_x_dark_terminal_italics")
+  let g:ten_x_dark_terminal_italics = 256
+"  endif
 
 " This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
