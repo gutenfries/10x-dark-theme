@@ -1,14 +1,14 @@
 " vim:fdm=marker
 " Vim Color File
-" Name:       onedark.vim
-" Maintainer: https://github.com/joshdick/onedark.vim/
+" Name:       10xDark.vim
+" Maintainer: https://github.com/joshdick/10xDark.vim/
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
 
-" Companion statusline plugin and terminal themes are included with onedark.vim:
-"  * https://github.com/joshdick/onedark.vim#lightlinevim-colorscheme
-"  * https://github.com/joshdick/onedark.vim#vim-airline-theme
-"  * https://github.com/joshdick/onedark.vim/tree/main/term
+" Companion statusline plugin and terminal themes are included with 10xDark.vim:
+"  * https://github.com/joshdick/10xDark.vim#lightlinevim-colorscheme
+"  * https://github.com/joshdick/10xDark.vim#vim-airline-theme
+"  * https://github.com/joshdick/10xDark.vim/tree/main/term
 
 " Color Reference {{{
 
@@ -54,27 +54,27 @@ endif
 
 set t_Co=256
 
-let g:colors_name="onedark"
+let g:colors_name="ten_x_dark"
 
 " Set to "256" for 256-color terminals, or
 " set to "16" to use your terminal emulator's native colors
 " (a 16-color palette for this color scheme is available; see
-" < https://github.com/joshdick/onedark.vim/blob/main/README.md >
+" < https://github.com/joshdick/10xDark.vim/blob/main/README.md >
 " for more information.)
-if !exists("g:onedark_termcolors")
-  let g:onedark_termcolors = 256
+if !exists("g:ten_x_dark_termcolors")
+  let g:ten_x_dark_termcolors = 256
 endif
 
 " Not all terminals support italics properly. If yours does, opt-in.
-if !exists("g:onedark_terminal_italics")
-  let g:onedark_terminal_italics = 0
+if !exists("g:ten_x_dark_terminal_italics")
+  let g:ten_x_dark_terminal_italics = 0
 endif
 
 " This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
-let s:group_colors = {} " Cache of default highlight group settings, for later reference via `onedark#extend_highlight`
+let s:group_colors = {} " Cache of default highlight group settings, for later reference via `ten_x_dark#extend_highlight`
 function! s:h(group, style, ...)
-  if (a:0 > 0) " Will be true if we got here from onedark#extend_highlight
+  if (a:0 > 0) " Will be true if we got here from ten_x_dark#extend_highlight
     let s:highlight = s:group_colors[a:group]
     for style_type in ["fg", "bg", "sp"]
       if (has_key(a:style, style_type))
@@ -93,7 +93,7 @@ function! s:h(group, style, ...)
     let s:group_colors[a:group] = s:highlight " Cache default highlight group settings
   endif
 
-  if g:onedark_terminal_italics == 0
+  if g:ten_x_dark_terminal_italics == 0
     if has_key(s:highlight, "cterm") && s:highlight["cterm"] == "italic"
       unlet s:highlight.cterm
     endif
@@ -102,7 +102,7 @@ function! s:h(group, style, ...)
     endif
   endif
 
-  if g:onedark_termcolors == 16
+  if g:ten_x_dark_termcolors == 16
     let l:ctermfg = (has_key(s:highlight, "fg") ? s:highlight.fg.cterm16 : "NONE")
     let l:ctermbg = (has_key(s:highlight, "bg") ? s:highlight.bg.cterm16 : "NONE")
   else
@@ -122,11 +122,11 @@ endfunction
 
 " public {{{
 
-function! onedark#set_highlight(group, style)
+function! ten_x_dark#set_highlight(group, style)
   call s:h(a:group, a:style)
 endfunction
 
-function! onedark#extend_highlight(group, style)
+function! ten_x_dark#extend_highlight(group, style)
   call s:h(a:group, a:style, 1)
 endfunction
 
@@ -136,7 +136,7 @@ endfunction
 
 " Color Variables {{{
 
-let s:colors = onedark#GetColors()
+let s:colors = ten_x_dark#GetColors()
 
 let s:red = s:colors.red
 let s:dark_red = s:colors.dark_red
@@ -247,7 +247,7 @@ call s:h("DiffAdd", { "bg": s:green, "fg": s:black }) " diff mode: Added line
 call s:h("DiffChange", { "fg": s:yellow, "gui": "underline", "cterm": "underline" }) " diff mode: Changed line
 call s:h("DiffDelete", { "bg": s:red, "fg": s:black }) " diff mode: Deleted line
 call s:h("DiffText", { "bg": s:yellow, "fg": s:black }) " diff mode: Changed text within a changed line
-if get(g:, 'onedark_hide_endofbuffer', 0)
+if get(g:, 'ten_x_dark_hide_endofbuffer', 0)
     " If enabled, will style end-of-buffer filler lines (~) to appear to be hidden.
     call s:h("EndOfBuffer", { "fg": s:black }) " filler lines (~) after the last line in the buffer
 endif
@@ -603,7 +603,7 @@ call s:h("CocWarningSign", { "fg": s:yellow })
 call s:h("CocInfoSign", { "fg": s:blue })
 call s:h("CocHintSign", { "fg": s:cyan })
 call s:h("CocFadeOut", { "fg": s:comment_grey })
-" https://github.com/joshdick/onedark.vim/issues/313
+" https://github.com/joshdick/10xDark.vim/issues/313
 highlight! link CocMenuSel PmenuSel
 
 " neomake/neomake

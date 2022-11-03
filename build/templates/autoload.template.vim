@@ -1,6 +1,6 @@
-" [onedark.vim](https://github.com/joshdick/onedark.vim/)
+" [10xDark.vim](https://github.com/joshdick/10xDark.vim/)
 
-let s:overrides = get(g:, "onedark_color_overrides", {})
+let s:overrides = get(g:, "ten_x_dark_color_overrides", {})
 
 let s:colors = {
       \ "red": get(s:overrides, "red", { "gui": "<%=red.gui%>", "cterm": "<%=red.cterm%>", "cterm16": "<%=red.cterm16%>" }),
@@ -24,6 +24,6 @@ let s:colors = {
       \ "vertsplit": get(s:overrides, "vertsplit", { "gui": "<%=vertsplit.gui%>", "cterm": "<%=vertsplit.cterm%>", "cterm16": "<%=vertsplit.cterm16%>" }),
       \}
 
-function! onedark#GetColors()
+function! ten_x_dark#GetColors()
   return s:colors
 endfunction

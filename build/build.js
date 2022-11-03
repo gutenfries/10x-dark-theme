@@ -31,8 +31,8 @@ const specialColors = Object.freeze({
 const colors = Object.assign({}, baseColors, specialColors);
 
 const templateMap = Object.freeze({
-	'templates/autoload.template.vim': '../autoload/onedark.vim',
-	'templates/One Dark.Xresources': '../term/One Dark.Xresources',
+	'templates/autoload.template.vim': '../autoload/10xDark.vim',
+	'templates/10xDark.Xresources': '../term/10xDark.Xresources',
 });
 
 const shouldCheck = String(process.argv[2]).toLowerCase() === 'check';
@@ -101,7 +101,7 @@ Object.keys(templateMap).forEach((templateFilename) => {
 
 try {
 	// Use the Xresources theme as a color source since it was generated above via templating
-	const xresources = readFileSync(resolve(__dirname, '../term/One Dark.Xresources'), 'utf8');
+	const xresources = readFileSync(resolve(__dirname, '../term/10xDark.Xresources'), 'utf8');
 	const terminalPalette = termcolors.xresources.import(xresources);
 
 	let alacrittyTemplate, itermTemplate, kittyTemplate, konsoleTemplate, terminalAppTemplate;
@@ -109,7 +109,7 @@ try {
 	// Compile custom terminal color templates based on ones that ship with termcolors
 	try {
 		alacrittyTemplate = termcolors.export(
-			readFileSync(resolve(__dirname, 'templates/One Dark.alacritty')),
+			readFileSync(resolve(__dirname, 'templates/10xDark.alacritty')),
 			_.partialRight(_.mapValues, function (color) {
 				return color.toHex().slice(1);
 			})
@@ -117,14 +117,14 @@ try {
 
 		itermTemplate = termcolors.export(
 			// From termcolors/lib/formats/iterm.js
-			readFileSync(resolve(__dirname, 'templates/One Dark.itermcolors')),
+			readFileSync(resolve(__dirname, 'templates/10xDark.itermcolors')),
 			_.partialRight(_.mapValues, function (color) {
 				return color.toAvgRgbArray();
 			})
 		);
 
 		kittyTemplate = termcolors.export(
-			readFileSync(resolve(__dirname, 'templates/One Dark.kitty')),
+			readFileSync(resolve(__dirname, 'templates/10xDark.kitty')),
 			_.partialRight(_.mapValues, function (color) {
 				return color.toHex().slice(1);
 			})
@@ -132,7 +132,7 @@ try {
 
 		konsoleTemplate = termcolors.export(
 			// From termcolors/lib/formats/konsole.js
-			readFileSync(resolve(__dirname, 'templates/One Dark.colorscheme')),
+			readFileSync(resolve(__dirname, 'templates/10xDark.colorscheme')),
 			_.partialRight(_.mapValues, function (color) {
 				return color.toRgbArray().join();
 			})
@@ -151,7 +151,7 @@ try {
 		];
 
 		terminalAppTemplate = termcolors.export(
-			readFileSync(resolve(__dirname, 'templates/One Dark.terminal')),
+			readFileSync(resolve(__dirname, 'templates/10xDark.terminal')),
 			// From termcolors/lib/formats/terminal-app.js
 			_.partialRight(_.mapValues, function (color) {
 				var srgb = color.toAvgRgbArray();
@@ -170,11 +170,11 @@ try {
 	}
 
 	try {
-		writeFileSync(resolve(__dirname, '../term/One Dark.alacritty'), alacrittyTemplate(terminalPalette));
-		writeFileSync(resolve(__dirname, '../term/One Dark.itermcolors'), itermTemplate(terminalPalette));
-		writeFileSync(resolve(__dirname, '../term/One Dark.kitty'), kittyTemplate(terminalPalette));
-		writeFileSync(resolve(__dirname, '../term/One Dark.colorscheme'), konsoleTemplate(terminalPalette));
-		writeFileSync(resolve(__dirname, '../term/One Dark.terminal'), terminalAppTemplate(terminalPalette));
+		writeFileSync(resolve(__dirname, '../term/10xDark.alacritty'), alacrittyTemplate(terminalPalette));
+		writeFileSync(resolve(__dirname, '../term/10xDark.itermcolors'), itermTemplate(terminalPalette));
+		writeFileSync(resolve(__dirname, '../term/10xDark.kitty'), kittyTemplate(terminalPalette));
+		writeFileSync(resolve(__dirname, '../term/10xDark.colorscheme'), konsoleTemplate(terminalPalette));
+		writeFileSync(resolve(__dirname, '../term/10xDark.terminal'), terminalAppTemplate(terminalPalette));
 	} catch (e) {
 		handleError('Error writing terminal color file', e);
 	}
