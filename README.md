@@ -51,6 +51,6 @@ I love coding, but as we all know, your code is only as good as your IDE theme. 
 
 I'll probably add an image with the color palette and brief explanations of color choices later.
 
-## Thank You For Checking out this theme!
+## Thank You For Checking out this theme
 
 If you like this theme, please consider giving it a star on [GitHub](https://github.com/gutenfries/10x-dark-theme) or giving it a rating on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=gutenfries.10x-dark-theme).

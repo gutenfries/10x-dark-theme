@@ -3,7 +3,7 @@
 	"displayName": "10x Dark Theme",
 	"description": "The only theme for VS Code",
 	"license": "MIT",
-	"version": "1.0.1",
+	"version": "1.1.1",
 	"publisher": "gutenfries",
 	"scripts": {
 		"build": "node build/build.js",
@@ -13,7 +13,9 @@
 		"eslint:check": "eslint .",
 		"eslint:fix": "eslint --fix .",
 		"prettier:check": "prettier --check .",
-		"prettier:fix": "prettier --write ."
+		"prettier:fix": "prettier --write .",
+		"package": "vsce package",
+		"publish": "vsce publish"
 	},
 	"author": {
 		"name": "Mark Gutenberger",

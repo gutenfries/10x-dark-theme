@@ -56,7 +56,7 @@ const baseColors = Object.freeze({
 		cterm16: '15',
 	},
 	black: {
-		gui: '#2b2d3a',
+		gui: '#313135',
 		cterm: '235',
 		cterm16: '0',
 	},

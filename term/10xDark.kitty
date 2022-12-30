@@ -4,7 +4,7 @@ cursor_text_color        #3f445b
 
 # Special
 foreground               #c5cdd9
-background               #2b2d3a
+background               #313135
 selection_foreground     #3f445b
 selection_background     #5c6370
 
